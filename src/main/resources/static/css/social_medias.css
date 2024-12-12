@@ -1,0 +1,296 @@
+/*this is for the google sign in button*/
+/* .login-with-google-btn {
+
+   
+
+transition: background-color .3s, box-shadow .3s;
+  
+padding: 12px 16px 12px 42px;
+border: none;
+border-radius: 3px;
+box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+
+color: #757575;
+font-size: 14px;
+font-weight: 500;
+font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+
+background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
+background-color: white;
+background-repeat: no-repeat;
+background-position: 12px 11px;
+
+&:hover {
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 2px 4px rgba(0, 0, 0, .25);
+}
+
+&:active {
+  background-color: #eeeeee;
+}
+
+&:focus {
+  outline: none;
+  box-shadow: 
+    0 -1px 0 rgba(0, 0, 0, .04),
+    0 2px 4px rgba(0, 0, 0, .25),
+    0 0 0 3px #c8dafc;
+}
+
+&:disabled {
+  filter: grayscale(100%);
+  background-color: #ebebeb;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+  cursor: not-allowed;
+}
+}
+.login-with-google-btn a{
+  text-decoration: none;
+} */
+/*google sign in button ends herer*/
+
+
+
+
+.button {
+    width: auto;
+    display: inline-block;
+    padding: 0 18px 0 6px;
+    border: 0 none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 250ms linear;
+  
+  }
+  .button:hover {
+    text-decoration: none;
+  }
+  
+  .button--social-login {
+    margin-bottom: 12px;
+    margin-right: 12px;
+    color: white;
+    height: 50px;
+    line-height: 46px;
+    position: relative;
+    text-align: left;
+  }
+  .button--social-login .icon {
+    margin-right: 12px;
+    font-size: 24px;
+    line-height: 24px;
+    width: 42px;
+    height: 24px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    top: 4px;
+  }
+  .button--social-login .icon:before {
+    display: inline-block;
+    width: 40px;
+  }
+  .button--social-login .icon:after {
+    content: "";
+  }
+  
+  .button--bitbucket {
+    background-color: #205081;
+    border: 1px solid #163758;
+  }
+  .button--bitbucket .icon {
+    border-right: 1px solid #163758;
+  }
+  .button--bitbucket .icon:after {
+    border-right: 1px solid #2a69aa;
+  }
+  .button--bitbucket:hover {
+    background-color: #1b436d;
+  }
+  
+  .button--dropbox {
+    background-color: #007DE1;
+    border: 1px solid #0061ae;
+  }
+  .button--dropbox .icon {
+    border-right: 1px solid #0061ae;
+  }
+  .button--dropbox .icon:after {
+    border-right: 1px solid #1597ff;
+  }
+  .button--dropbox:hover {
+    background-color: #006fc8;
+  }
+  
+  .button--facebook {
+      background-color: #007DE1;
+      border: 1px solid #0061ae;
+  }
+  .button--facebook .icon {
+      border-right: 1px solid #0061ae;
+  }
+  
+  .button--facebook .icon:after {
+      border-right: 1px solid #1597ff;
+  }
+  
+  .button--facebook:hover {
+      background-color: #006fc8;
+  }
+  
+  
+  .button--flickr {
+    background-color: #FF0084;
+    border: 1px solid #cc006a;
+  }
+  .button--flickr .icon {
+    border-right: 1px solid #cc006a;
+  }
+  .button--flickr .icon:after {
+    border-right: 1px solid #ff339d;
+  }
+  .button--flickr:hover {
+    background-color: #e60077;
+  }
+  
+  .button--github {
+    background-color: #333;
+    border: 1px solid #1a1a1a;
+  }
+  .button--github .icon {
+    border-right: 1px solid #1a1a1a;
+  }
+  .button--github .icon:after {
+    border-right: 1px solid #4d4d4d;
+  }
+  .button--github:hover {
+    background-color: #262626;
+  }
+  
+  .button--google {
+      background-color: #DD4B39;
+      border: 1px solid #c23321;
+  }
+  .button--google .icon {
+      border-right: 1px solid #c23321;
+  }
+  .button--google .icon:after {
+      border-right: 1px solid #e47365;
+  }
+  .button--google:hover {
+      background-color: #d73925;
+  }
+  
+  .button--googleplus {
+    background-color: #DD4B39;
+    border: 1px solid #c23321;
+  }
+  .button--googleplus .icon {
+    border-right: 1px solid #c23321;
+  }
+  .button--googleplus .icon:after {
+    border-right: 1px solid #e47365;
+  }
+  .button--googleplus:hover {
+    background-color: #d73925;
+  }
+  
+  .button--linkedin {
+    background-color: #0087be;
+    border: 1px solid #00638b;
+  }
+  .button--linkedin .icon {
+    border-right: 1px solid #00638b;
+  }
+  .button--linkedin .icon:after {
+    border-right: 1px solid #00abf1;
+  }
+  .button--linkedin:hover {
+    background-color: #0075a5;
+  }
+  
+  .button--microsoft {
+    background-color: #00A4EF;
+    border: 1px solid #0081bc;
+  }
+  .button--microsoft .icon {
+    border-right: 1px solid #0081bc;
+  }
+  .button--microsoft .icon:after {
+    border-right: 1px solid #23baff;
+  }
+  .button--microsoft:hover {
+    background-color: #0093d6;
+  }
+  
+  .button--openid {
+    background-color: #F78C40;
+    border: 1px solid #f56f0f;
+  }
+  .button--openid .icon {
+    border-right: 1px solid #f56f0f;
+  }
+  .button--openid .icon:after {
+    border-right: 1px solid #f9a971;
+  }
+  .button--openid:hover {
+    background-color: #f67d28;
+  }
+  
+  .button--soundcloud {
+    background-color: #FF5500;
+    border: 1px solid #cc4400;
+  }
+  .button--soundcloud .icon {
+    border-right: 1px solid #cc4400;
+  }
+  .button--soundcloud .icon:after {
+    border-right: 1px solid #ff7733;
+  }
+  .button--soundcloud:hover {
+    background-color: #e64d00;
+  }
+  
+  .button--spotify {
+    background-color: #2EBD59;
+    border: 1px solid #249446;
+  }
+  .button--spotify .icon {
+    border-right: 1px solid #249446;
+  }
+  .button--spotify .icon:after {
+    border-right: 1px solid #4bd374;
+  }
+  .button--spotify:hover {
+    background-color: #29a84f;
+  }
+  
+  .button--twitter {
+    background-color: #3B94D9;
+    border: 1px solid #257abc;
+  }
+  .button--twitter .icon {
+    border-right: 1px solid #257abc;
+  }
+  .button--twitter .icon:after {
+    border-right: 1px solid #66abe1;
+  }
+  .button--twitter:hover {
+    background-color: #2988d2;
+  }
+  
+  .button--yahoo {
+    background-color: #500095;
+    border: 1px solid #350062;
+  }
+  .button--yahoo .icon {
+    border-right: 1px solid #350062;
+  }
+  .button--yahoo .icon:after {
+    border-right: 1px solid #6b00c8;
+  }
+  .button--yahoo:hover {
+    background-color: #42007c;
+  }
+  
+   
+  

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 400px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            font-weight: 600;
+            color: #1e3a8a;
+        }
+        .subheader {
+            text-align: center;
+            color: #888;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: 600;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #333;
+        }
+        textarea {
+            resize: none;
+            height: 60px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn-signup {
+            background-color: #1e3a8a;
+            color: white;
+        }
+        .btn-reset {
+            background-color: #b91c1c;
+            color: white;
+        }
+        .btn-signup:hover {
+            background-color: #3b82f6;
+        }
+        .btn-reset:hover {
+            background-color: #dc2626;
+        }
+        .error {
+        color: red;
+        font-size: 0.9em;
+    }
+
+    .success {
+        color: green;
+        font-size: 1.1em;
+    }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">Signup Here</div>
+     
+    <!-- message here -->
+     <div data-th-replace="message::messagebox"></div>
+
+    <!-- Thymeleaf form -->
+    <form th:action="@{/do-register}" data-th-object="${userForm}" method="post" novalidate>
+        <label for="name">Name</label>
+        <input type="text" id="name" data-th-field="*{name}" placeholder="Enter here">
+
+
+        <p
+         data-th-if="${#fields.hasErrors('name')}"
+         data-th-errors="*{name}"
+        class="error">Name is required</p>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" data-th-field="*{email}" placeholder="name@example.com">
+        <p
+         data-th-if="${#fields.hasErrors('email')}"
+         data-th-errors="*{email}"
+        class="error">Email is required</p>
+
+
+        <label for="password">New Password</label>
+        <input type="password" id="password" data-th-field="*{password}" placeholder="Enter password">
+        <p
+         data-th-if="${#fields.hasErrors('password')}"
+         data-th-errors="*{password}"
+        class="error">Password is required</p>
+
+
+
+        <label for="contact">Contact Number</label>
+        <input type="text" id="contact" data-th-field="*{phoneNumber}" placeholder="Enter contact number">
+        <p
+         data-th-if="${#fields.hasErrors('phoneNumber')}"
+         data-th-errors="*{phoneNumber}"
+        class="error">phoneNumber is required</p>
+
+
+
+        <label for="bio">Write about your profession!</label>
+        <textarea id="bio" data-th-field="*{about}" placeholder="Write here..."></textarea>
+        <p
+         data-th-if="${#fields.hasErrors('about')}"
+         data-th-errors="*{about}"
+        class="error">Profession is required</p>
+
+
+
+        <div class="buttons">
+            <button type="submit" class="btn btn-signup">Signup</button>
+            <button type="reset" class="btn btn-reset">Reset</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

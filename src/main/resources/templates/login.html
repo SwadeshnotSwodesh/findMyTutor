@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Here</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <!--Social medias buttons-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <link rel="stylesheet" data-th-href="@{'/css/social_medias.css'}">
+    
+    <style>
+        /* CSS styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 400px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            font-weight: 600;
+            color: #1e3a8a;
+        }
+        .subheader {
+            text-align: center;
+            color: #888;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: 600;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #333;
+        }
+        textarea {
+            resize: none;
+            height: 60px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn-signup {
+            background-color: #1e3a8a;
+            color: white;
+        }
+        .btn-reset {
+            background-color: #b91c1c;
+            color: white;
+        }
+        .btn-signup:hover {
+            background-color: #3b82f6;
+        }
+        .btn-reset:hover {
+            background-color: #dc2626;
+        }
+        .error {
+        color: red;
+        font-size: 0.9em;
+    }
+
+    .success {
+        color: green;
+        font-size: 1.1em;
+    }
+
+    /*social medias buttons*/
+    @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+/* body {
+  text-align: center;
+  padding: 24px 24px 96px;
+  font-family: 'Roboto Slab', serif;
+} */
+
+h1, h2 {
+  margin-bottom: 48px;
+  font-weight: normal;
+}
+
+ 
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">Signup Here</div>
+     
+    <!-- message here -->
+     <div data-th-replace="message::messagebox"></div>
+
+
+     <div class="text-red-700" th:if="${param.error}">
+        Invalid username and password.</div>
+    <div class="text-green-700" th:if="${param.logout}">
+        You have been logged out.</div>
+
+    <!-- Thymeleaf form -->
+    <form data-th-action="@{'/authenticate'}" method="post" novalidate>
+         
+
+         
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="name@example.com">
+        <!-- <p
+         data-th-if="${#fields.hasErrors('email')}"
+         data-th-errors="*{email}"
+        class="error">Email is required</p> -->
+
+
+        <label for="password">New Password</label>
+        <input type="password" id="password" name="password"  placeholder="Enter password">
+        <!-- <p
+         data-th-if="${#fields.hasErrors('password')}"
+         data-th-errors="*{password}"
+        class="error">Password is required</p> -->
+
+
+
+         
+
+
+
+         
+
+
+
+        <div class="buttons">
+            <button type="submit" class="btn btn-signup">Login</button>
+             
+        </div>
+    </form>
+
+<br>
+     <!-- <button type="button" class="login-with-google-btn" >
+        <a data-th-href="@{'/oauth2/authorization/google'}">Sign in with Google</a>
+        
+      </button> -->
+       
+<a class="button button--social-login button--google" data-th-href="@{'/oauth2/authorization/google'}"><i class="icon fa fa-google"></i>Login With Google</a> 
+<a class="button button--social-login button--facebook" href="#"><i class="icon fa fa-facebook"></i>Login With Facebook</a>
+<a class="button button--social-login button--github" data-th-href="@{'/oauth2/authorization/github '}"><i class="icon fa fa-github"></i>Login With Github</a>
+</div>
+
+</body>
+</html>
+ 
